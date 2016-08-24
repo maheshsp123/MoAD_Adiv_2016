@@ -2,6 +2,7 @@ package adiv2016.bvb.android.example.com.moad_adiv_2016;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -24,6 +25,12 @@ public class LoginActivity extends AppCompatActivity {
         passwdET_ref=(EditText) findViewById(R.id.passwdET_id);
         loginSubmitBtn_ref= (Button)findViewById(R.id.loginSubmitBtnId);
 
+        loginSubmitBtn_ref.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
 
