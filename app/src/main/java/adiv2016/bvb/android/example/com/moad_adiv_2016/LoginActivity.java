@@ -9,13 +9,22 @@ public class LoginActivity extends AppCompatActivity {
     EditText userNameET_ref;
     EditText passwdET_ref;
     Button loginSubmitBtn_ref;
+    UserCredentials[] userArray=new UserCredentials[4];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        for(int i=0;i<userArray.length;i++)
+            userArray[i]=new UserCredentials("aaa"+i, "bbb"+i);
+
         setContentView(R.layout.activity_login);
 
+
         userNameET_ref=(EditText) findViewById(R.id.userNameET_Id);
+        passwdET_ref=(EditText) findViewById(R.id.passwdET_id);
+        loginSubmitBtn_ref= (Button)findViewById(R.id.loginSubmitBtnId);
+
+
 
 
     }
