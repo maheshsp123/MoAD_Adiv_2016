@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     EditText userNameET_ref;
@@ -28,7 +29,25 @@ public class LoginActivity extends AppCompatActivity {
         loginSubmitBtn_ref.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String userName=userNameET_ref.getText().toString();
+                String pswd=passwdET_ref.getText().toString();
+                boolean flag=false;
+                for (int a=0;a<userArray.length;a++)
+                {
+                    if(userName.equals(userArray[a].userName)  &&
+                            pswd.equals(userArray[a].password) )
+                    {
+                        flag=true;
+                        break;
 
+                    }
+                }
+                if (flag)
+                    Toast.makeText
+                            (LoginActivity.this, "successfull login", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText
+                            (LoginActivity.this, "login failed", Toast.LENGTH_SHORT).show();
             }
         });
 
