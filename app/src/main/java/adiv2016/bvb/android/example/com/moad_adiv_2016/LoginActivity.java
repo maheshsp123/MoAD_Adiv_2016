@@ -2,6 +2,8 @@ package adiv2016.bvb.android.example.com.moad_adiv_2016;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,5 +55,22 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_login,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int select_item= item.getItemId();
+        if(select_item==R.id.profile_menuitem_id)
+            Toast.makeText
+                    (LoginActivity.this, "profile selected"
+                            , Toast.LENGTH_SHORT).show();
+        return super.onOptionsItemSelected(item);
     }
 }
