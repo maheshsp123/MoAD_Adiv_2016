@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button firstActLaunchButtonRef;
     AppCompatActivity thisActivityRef;
     String LOG_CAT= MainActivity.class.getSimpleName();
-
+    //test line: Github , laptop
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
